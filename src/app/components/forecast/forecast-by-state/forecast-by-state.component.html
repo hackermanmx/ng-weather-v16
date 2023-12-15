@@ -1,0 +1,15 @@
+<button [routerLink]="['/']">&#8592; Back</button>
+<section class="wrapper">
+  <ng-container *ngIf="forecast$ | async as forecast; else loading">
+    <ng-container *ngFor="let data of forecast.properties.periods">
+      <div class="item">
+        <h4>{{ data.name }}</h4>
+        <div class="details">
+          <h3>{{ data.temperature }} {{ data.temperatureUnit }}</h3>
+          <p>{{ data.detailedForecast }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+  <ng-template #loading> Loading forecast, please wait...</ng-template>
+</section>

@@ -1,0 +1,16 @@
+ul {
+  list-style: unset;
+  padding-inline-start: 0;
+
+  li {
+    padding: 0;
+    margin: 0;
+    display: block;
+    font-size: 1.5rem;
+    line-height: 2;
+
+    a {
+      color: white;
+    }
+  }
+}

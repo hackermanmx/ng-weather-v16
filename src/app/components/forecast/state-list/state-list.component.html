@@ -1,0 +1,5 @@
+<ul class="forecast-options">
+  <li *ngFor="let option of states$ | async">
+    <a [routerLink]="[option.code]">{{ option.name }}</a>
+  </li>
+</ul>
